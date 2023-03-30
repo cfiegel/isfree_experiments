@@ -1,0 +1,30 @@
+description: tree-ada_vs_baselines
+
+game_names: 
+  - kuhn_poker
+  - leduc_poker
+
+n_simulations: 4
+save_path:  ./results
+
+
+global_init_kwargs:
+  budget: 100_000
+  
+tuning_parameters:
+  tune_parameters: True
+  size_grid_search: 10
+  lowest_multiplier: 0.001
+  highest_multiplier: 1_000
+
+
+global_training_kwargs:
+  number_points: 50
+  first_point: 10
+  record_exploitabilities: True
+  verbose: 0
+
+agents: 
+  - ./configs/agents/is_free.yaml
+  - ./configs/agents/ixomd.yaml
+

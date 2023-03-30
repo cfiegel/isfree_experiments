@@ -1,0 +1,7 @@
+agent_class: 'agents.adaptive_ftrl.AdaptiveFTRL'
+
+init_kwargs:
+  lr_constant: 1
+  ix_constant: 0.05
+
+  name: 'AdaptiveFTRL'
